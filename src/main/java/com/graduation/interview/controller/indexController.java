@@ -9,7 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/index")
 public class indexController {
     @GetMapping("/index")
-    public String index(Model model){
+    public String index(Model model) {
+        System.out.println("请求进入controller");
+        return "index";
+    }
+
+    @GetMapping("/ADD")
+    public String add(Model model) {
         System.out.println("请求进入controller");
         return "index";
     }
